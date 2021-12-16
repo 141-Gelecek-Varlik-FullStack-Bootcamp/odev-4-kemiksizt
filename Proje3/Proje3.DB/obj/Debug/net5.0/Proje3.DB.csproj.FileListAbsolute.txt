@@ -1,0 +1,15 @@
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\Proje3.DB.deps.json
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\Proje3.DB.runtimeconfig.json
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\Proje3.DB.runtimeconfig.dev.json
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\Proje3.DB.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\ref\Proje3.DB.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\bin\Debug\net5.0\Proje3.DB.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.csproj.AssemblyReference.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.AssemblyInfoInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.AssemblyInfo.cs
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.csproj.CoreCompileInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\ref\Proje3.DB.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.DB\obj\Debug\net5.0\Proje3.DB.genruntimeconfig.cache

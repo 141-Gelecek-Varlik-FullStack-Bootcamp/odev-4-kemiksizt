@@ -1,0 +1,17 @@
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.Service.deps.json
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.Service.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\ref\Proje3.Service.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.Service.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.csproj.AssemblyReference.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.AssemblyInfoInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.AssemblyInfo.cs
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.csproj.CoreCompileInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\ref\Proje3.Service.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.DB.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.DB.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\obj\Debug\net5.0\Proje3.Service.csproj.CopyComplete
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.Model.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Service\bin\Debug\net5.0\Proje3.Model.pdb

@@ -1,0 +1,12 @@
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\bin\Debug\net5.0\Proje3.Admin.deps.json
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\bin\Debug\net5.0\Proje3.Admin.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\bin\Debug\net5.0\ref\Proje3.Admin.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\bin\Debug\net5.0\Proje3.Admin.pdb
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.csproj.AssemblyReference.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.AssemblyInfoInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.AssemblyInfo.cs
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.csproj.CoreCompileInputs.cache
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\ref\Proje3.Admin.dll
+C:\Users\Turab\Desktop\3.Hafta\Proje3\Proje3.Admin\obj\Debug\net5.0\Proje3.Admin.pdb
