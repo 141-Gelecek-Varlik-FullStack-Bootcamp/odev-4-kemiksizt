@@ -18,7 +18,7 @@ namespace Week3.API.Infrastructure
             return;
         }
 
-        public void OnActionExecuting(ActionExecutingContext context)
+        public void OnActionExecuting(ActionExecutingContext context)//, IServiceProvider serviceProvider)
         {
             //var memoryCache = context.HttpContext.RequestServices.GetService<IMemoryCache>();
 
