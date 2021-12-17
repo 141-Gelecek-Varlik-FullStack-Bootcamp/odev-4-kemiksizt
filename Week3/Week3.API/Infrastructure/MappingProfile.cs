@@ -20,8 +20,8 @@ namespace Week3.API.Infrastructure
             CreateMap<ProductViewModel, Product>();
             CreateMap<Product, ProductViewModel>();
 
-            CreateMap<Product, ProductViewModel>();
-            CreateMap<ProductViewModel, Product>();
+            CreateMap<Product, ListProductViewModel>();
+            CreateMap<ListProductViewModel, Product>();
 
 
             CreateMap<CategoryViewModel, Category>();

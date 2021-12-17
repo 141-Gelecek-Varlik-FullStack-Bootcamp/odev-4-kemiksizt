@@ -19,5 +19,7 @@ namespace Week3.Service.Product
         //public General<ProductViewModel> DeleteProduct(int id);
         public General<ProductViewModel> GetProductListById(int id, ProductViewModel product);
         public General<ProductViewModel> DeleteProduct(int id, ProductViewModel product);
+
+        public General<ListProductViewModel> SortProduct(string sortingParameter);
     }
 }

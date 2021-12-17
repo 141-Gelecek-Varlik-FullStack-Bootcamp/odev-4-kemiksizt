@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -211,6 +212,51 @@ namespace Week3.Service.Product
             return result;
         }
 
+        public General<ListProductViewModel> SortProduct(string param)
+        {
+            var result = new General<ListProductViewModel>();
 
+            using (var context = new GrootContext())
+            {
+                var products = context.Product;
+
+                if (param.Equals("PriceASC"))
+                {
+                    products = (DbSet<DB.Entities.Product>)products.OrderBy(x => x.Price);
+                }
+
+                else if (param.Equals("PriceDESC"))
+                {
+                    products = (DbSet<DB.Entities.Product>)products.OrderByDescending(x => x.Price);
+                }
+
+                else if (param.Equals("NameASC"))
+                {
+                    products = (DbSet<DB.Entities.Product>)products.OrderBy(x => x.Price);
+                }
+
+                else if (param.Equals("NameDESC"))
+                {
+                    products = (DbSet<DB.Entities.Product>)products.OrderByDescending(x => x.Price);
+                }
+
+                else
+                {
+                    result.ExceptionMessage = "Yanlış işlem seçtiniz.";
+
+                    return result;
+                    
+                }
+
+                result.List = mapper.Map<List<ListProductViewModel>>(products);
+                result.Message = "Sıralama işlemi başarılı!";
+               
+
+            }
+
+            return result;
+        }
+
+        
     }
 }
