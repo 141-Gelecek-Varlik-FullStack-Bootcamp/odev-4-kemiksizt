@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Week3.API.Infrastructure;
 using Week3.Model;
 using Week3.Model.Product;
 using Week3.Service.Product;
@@ -17,6 +18,7 @@ namespace Week3.API.Controllers
         }
 
         [HttpPost("Delete")]
+        [ServiceFilter(typeof(LoginFilter))]
         public General<ProductViewModel> DeleteUser(int id, [FromBody] ProductViewModel product)
         {
             return productService.DeleteProduct(id, product);
