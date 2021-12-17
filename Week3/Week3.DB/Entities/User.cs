@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 #nullable disable
 
-// User tablosunun bağlantıları
-
 namespace Week3.DB.Entities
 {
     public partial class User
@@ -12,6 +10,7 @@ namespace Week3.DB.Entities
         public User()
         {
             Category = new HashSet<Category>();
+            Product = new HashSet<Product>();
         }
 
         public int Id { get; set; }
@@ -26,7 +25,7 @@ namespace Week3.DB.Entities
         public int Iuser { get; set; }
         public int? Uuser { get; set; }
 
-        public virtual Product Product { get; set; }
         public virtual ICollection<Category> Category { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

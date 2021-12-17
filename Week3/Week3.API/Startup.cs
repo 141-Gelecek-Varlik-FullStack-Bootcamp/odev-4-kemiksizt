@@ -42,6 +42,7 @@ namespace Week3.API
 
             services.AddTransient<ICategoryService, CategoryService>();
 
+            services.AddMemoryCache();
             services.AddControllers();
             services.AddSwaggerGen(c => 
             {

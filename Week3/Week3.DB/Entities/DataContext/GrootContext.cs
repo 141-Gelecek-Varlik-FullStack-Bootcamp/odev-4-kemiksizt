@@ -3,8 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Week3.DB.Entities;
 
-#nullable disable  
-// Database oluşturulduktan sonra bağlantıların otomatik olarak oluşturulduğu kısım(İçerikler)
+#nullable disable
 
 namespace Week3.DB.Entities.DataContext
 {
@@ -70,8 +69,6 @@ namespace Week3.DB.Entities.DataContext
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(250)
@@ -108,9 +105,9 @@ namespace Week3.DB.Entities.DataContext
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_Category");
 
-                entity.HasOne(d => d.IdNavigation)
-                    .WithOne(p => p.Product)
-                    .HasForeignKey<Product>(d => d.Id)
+                entity.HasOne(d => d.IuserNavigation)
+                    .WithMany(p => p.Product)
+                    .HasForeignKey(d => d.Iuser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_User");
             });

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 #nullable disable
-// Category tablosunun bağlantıları
 
 namespace Week3.DB.Entities
 {

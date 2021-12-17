@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 #nullable disable
 
-// Product tablosunun bağlantıları
-
 namespace Week3.DB.Entities
 {
     public partial class Product
@@ -24,6 +22,6 @@ namespace Week3.DB.Entities
         public int? Uuser { get; set; }
 
         public virtual Category Category { get; set; }
-        public virtual User IdNavigation { get; set; }
+        public virtual User IuserNavigation { get; set; }
     }
 }

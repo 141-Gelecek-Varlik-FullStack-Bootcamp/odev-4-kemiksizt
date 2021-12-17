@@ -106,13 +106,25 @@ namespace Week3.Service.Product
 
             using (var context = new GrootContext())
             {
-                InsProduct.Idate = DateTime.Now;
-                InsProduct.IsActive = true;
-                context.Product.Add(InsProduct);
-                context.SaveChanges();
+                var process = context.User.Any(x => x.Id == InsProduct.Iuser &&x.IsActive &&!x.IsDeleted);
 
-                data.Entity = mapper.Map<ProductViewModel>(InsProduct);
-                data.IsSuccess = true;
+                if (process)
+                {
+                    InsProduct.Idate = DateTime.Now;
+                    InsProduct.IsActive = true;
+                    context.Product.Add(InsProduct);
+                    context.SaveChanges();
+
+                    data.Entity = mapper.Map<ProductViewModel>(InsProduct);
+                    data.IsSuccess = true;
+                }
+
+                else
+                {
+                    data.ExceptionMessage = "Ürün ekleme yetkiniz yok !";
+                }
+                
+                
             }
 
             return data;
