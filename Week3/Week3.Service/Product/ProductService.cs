@@ -106,9 +106,9 @@ namespace Week3.Service.Product
 
             using (var context = new GrootContext())
             {
-                var process = context.User.Any(x => x.Id == InsProduct.Iuser &&x.IsActive &&!x.IsDeleted);
+                var permission = context.User.Any(x => x.Id == InsProduct.Iuser && x.IsActive && !x.IsDeleted);
 
-                if (process)
+                if (permission)
                 {
                     InsProduct.Idate = DateTime.Now;
                     InsProduct.IsActive = true;
@@ -117,16 +117,16 @@ namespace Week3.Service.Product
 
                     data.Entity = mapper.Map<ProductViewModel>(InsProduct);
                     data.IsSuccess = true;
+                    data.Message = "Kayıt ekleme işlemi başarılı";
                 }
 
                 else
                 {
                     data.ExceptionMessage = "Ürün ekleme yetkiniz yok !";
                 }
-                
-                
-            }
 
+
+            }
             return data;
         }
 
@@ -139,24 +139,33 @@ namespace Week3.Service.Product
             using (var context = new GrootContext())
             {
                 var updatedProduct = context.Product.SingleOrDefault(i => i.Id == id);
+                var permission = context.Product.Any(x => x.Iuser == product.IUser);
 
-                if (updatedProduct is not null)
+                if (permission)
                 {
-                    updatedProduct.Name = product.Name;
-                    updatedProduct.DisplayName = product.DisplayName;
-                    updatedProduct.Description = product.Description;
-                    updatedProduct.Price = product.Price;
-                    updatedProduct.Stock = product.Stock;
+                    if (updatedProduct is not null)
+                    {
+                        updatedProduct.Name = product.Name;
+                        updatedProduct.DisplayName = product.DisplayName;
+                        updatedProduct.Description = product.Description;
+                        updatedProduct.Price = product.Price;
+                        updatedProduct.Stock = product.Stock;
 
-                    context.SaveChanges();
+                        context.SaveChanges();
 
-                    data.Entity = mapper.Map<ProductViewModel>(updatedProduct);
-                    data.IsSuccess = true;
-                    data.Message = "İşlem başarılı!!";
+                        data.Entity = mapper.Map<ProductViewModel>(updatedProduct);
+                        data.IsSuccess = true;
+                        data.Message = "Güncelleme işlemi başarılı!!";
+                    }
+                    else
+                    {
+                        data.ExceptionMessage = "Aranan ürün bulunamadı. Bilgileri kontrol ediniz.";
+                    }
                 }
+
                 else
                 {
-                    data.ExceptionMessage = "Aranan ürün bulunamadı. Bilgileri kontrol ediniz.";
+                    data.ExceptionMessage = "Ürün ekleme yetkiniz yok !";
                 }
             }
 
@@ -171,22 +180,32 @@ namespace Week3.Service.Product
             using (var context = new GrootContext())
             {
                 var productActivity = context.Product.SingleOrDefault(i => i.Id == id);
+                var permission = context.Product.Any(x => x.Iuser == product.IUser);
 
-                if (productActivity is not null)
+                if (permission)
                 {
-                    productActivity.IsActive = false;
-                    productActivity.IsDeleted = true;
+                    if (productActivity is not null)
+                    {
+                        productActivity.IsActive = false;
+                        productActivity.IsDeleted = true;
 
-                    context.SaveChanges();
+                        context.SaveChanges();
 
-                    result.Entity = mapper.Map<ProductViewModel>(productActivity);
-                    result.IsSuccess = true;
-                    result.Message = "Silme işlemi başarılı!";
+                        result.Entity = mapper.Map<ProductViewModel>(productActivity);
+                        result.IsSuccess = true;
+                        result.Message = "Silme işlemi başarılı!";
+                    }
+                    else
+                    {
+                        result.ExceptionMessage = "Aranan ürün bulunamadı. Bilgileri kontrol ediniz.";
+                    }
                 }
                 else
                 {
-                    result.ExceptionMessage = "Aranan ürün bulunamadı. Bilgileri kontrol ediniz.";
+                    result.ExceptionMessage = "Ürün silme yetkiniz yok !";
                 }
+
+               
             }
 
             return result;
