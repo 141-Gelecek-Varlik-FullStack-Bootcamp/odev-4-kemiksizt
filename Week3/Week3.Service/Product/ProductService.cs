@@ -218,7 +218,7 @@ namespace Week3.Service.Product
 
             using (var context = new GrootContext())
             {
-                var products = context.Product.Where(u => u.IsActive && !u.IsDeleted);
+                var products = context.Product.Where(x => x.IsActive && !x.IsDeleted && x.Id > 0);
 
                 if (param.Equals("PriceASC"))
                 {
@@ -232,12 +232,12 @@ namespace Week3.Service.Product
 
                 else if (param.Equals("NameASC"))
                 {
-                    products = products.OrderBy(x => x.Price);
+                    products = products.OrderBy(x => x.Name);
                 }
 
                 else if (param.Equals("NameDESC"))
                 {
-                    products = products.OrderByDescending(x => x.Price);
+                    products = products.OrderByDescending(x => x.Name);
                 }
 
                 else
@@ -247,7 +247,7 @@ namespace Week3.Service.Product
                     return result;
                     
                 }
-
+                result.IsSuccess = true;
                 result.List = mapper.Map<List<ListProductViewModel>>(products);
                 result.Message = "Sıralama işlemi başarılı!";
                
@@ -257,6 +257,33 @@ namespace Week3.Service.Product
             return result;
         }
 
-        
+
+        public General<ListProductViewModel> FilterProduct(string param)
+        {
+            var result = new General<ListProductViewModel>();
+            using (var context = new GrootContext())
+            {
+                var products = context.Product.Where(x => x.IsActive && !x.IsDeleted && x.Id > 0);
+
+                products = products.Where(x => x.Name.StartsWith(param));
+                if (products.Any() )
+                {
+                    result.IsSuccess = true;
+                    result.List = mapper.Map<List<ListProductViewModel>>(products);
+                    result.Message = "Filtreleme işlemi başarılı";
+                }
+                else
+                {
+                    result.ExceptionMessage = "İstenilen ürün bulunamadı. Tekrar deneyin!";
+                    return result;
+                }
+                
+            }
+
+            return result;
+        }
+
+
+
     }
 }

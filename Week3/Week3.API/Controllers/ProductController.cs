@@ -59,9 +59,16 @@ namespace Week3.API.Controllers
 
         [HttpGet]
         [Route("Sort")]
-        public General<ListProductViewModel> SortProducts([FromQuery] string param)
+        public General<ListProductViewModel> SortProduct([FromQuery] string param)
         {
             return productService.SortProduct(param);
+        }
+
+        [HttpGet]
+        [Route("Filter")]
+        public General<ListProductViewModel> FilterProducts([FromQuery] string param)
+        {
+            return productService.FilterProduct(param);
         }
     }
     
