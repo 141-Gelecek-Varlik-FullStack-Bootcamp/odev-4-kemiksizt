@@ -213,6 +213,7 @@ namespace Week3.Service.Product
             return result;
         }
 
+        // Sıralama işlemlerinin olduğu bölüm. İsme ve fiyata göre artan ve ya azalan şeklinde seçim yapılabilir.
         public General<ListProductViewModel> SortProduct(string param)
         {
             var result = new General<ListProductViewModel>();
@@ -258,7 +259,7 @@ namespace Week3.Service.Product
             return result;
         }
 
-
+        // Filtreleme işlemi. Beklenenen isim özelliğine sahip ürünler getirilir.
         public General<ListProductViewModel> FilterProduct(string param)
         {
             var result = new General<ListProductViewModel>();
@@ -284,6 +285,8 @@ namespace Week3.Service.Product
             return result;
         }
 
+        // Sayfalama işlemi. Eğer istenilen sayfa sayısı ve sayfadaki ürün sayısı özellikleri toplam ürün sayısına
+        // uygun değilse hataya özel hata mesajları döner. X. sayfa Y adet ürün şeklinde çalışır.
         public General<ListProductViewModel> PaginateProduct(int productByPage, int pageNo)
         {
             var result = new General<ListProductViewModel>();
