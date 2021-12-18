@@ -13,5 +13,7 @@ namespace Week3.Model
         public List<T> List { get; set; }
         public string ExceptionMessage { get; set; }
         public string Message { get; set; }
+        public int ProductCount { get; set; }
+        public decimal pageCount { get; set; }
     }
 }

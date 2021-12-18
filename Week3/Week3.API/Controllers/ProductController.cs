@@ -70,6 +70,13 @@ namespace Week3.API.Controllers
         {
             return productService.FilterProduct(param);
         }
+
+        [HttpGet]
+        [Route("Paginate")]
+        public General<ListProductViewModel> PaginateProduct([FromQuery] int productByPage, [FromQuery]  int pageNo)
+        {
+            return productService.PaginateProduct(productByPage, pageNo);
+        }
     }
     
 }

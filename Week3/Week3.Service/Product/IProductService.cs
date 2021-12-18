@@ -23,5 +23,7 @@ namespace Week3.Service.Product
         public General<ListProductViewModel> SortProduct(string sortingParameter);
 
         public General<ListProductViewModel> FilterProduct(string param);
+
+        public General<ListProductViewModel> PaginateProduct(int prodcuctByPage, int pageNo);
     }
 }

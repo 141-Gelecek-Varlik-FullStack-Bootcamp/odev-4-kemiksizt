@@ -35,7 +35,7 @@ namespace Week3.Service.Product
                 {
                     result.List = mapper.Map<List<ProductViewModel>>(data);
                     result.IsSuccess = true;
-                    result.Message = "İşlem başarılı!";
+                    result.Message = "Listeleme işlemi başarılı!";
                 }
                 else
                 {
@@ -89,6 +89,7 @@ namespace Week3.Service.Product
                 {
                     products.List = mapper.Map<List<ProductViewModel>>(data);
                     products.IsSuccess = true;
+                    products.Message = "Listeleme işlemi başarılı!";
                 }
                 else
                 {
@@ -279,6 +280,56 @@ namespace Week3.Service.Product
                 }
                 
             }
+
+            return result;
+        }
+
+        public General<ListProductViewModel> PaginateProduct(int productByPage, int pageNo)
+        {
+            var result = new General<ListProductViewModel>();
+
+            decimal pageCount = 0;
+            decimal productCount = 0;
+            
+
+
+            using (var context = new GrootContext())
+            {
+
+                result.ProductCount = context.Product.Count();
+                productCount = result.ProductCount;
+
+                pageCount = Math.Ceiling(productCount / productByPage);
+                var products = context.Product.OrderBy(i => i.Id).Skip((int)((pageNo - 1) * productByPage)).Take((int)productByPage).ToList();
+
+
+                if (productByPage <= 0 || pageNo <= 0)
+                {
+                    result.ExceptionMessage = "Yanlış değer girdiniz!";
+                }
+
+                else if(productByPage > productCount)
+                {
+                    result.ExceptionMessage = "Bu kadar ürün mevcut değil! Sayıyı değiştirin.";
+                }
+
+                else if(pageNo > productCount)
+                {
+                    result.ExceptionMessage = "Bu kadar sayfa mevcut değil! Tekrar deneyin.";
+                }
+
+                else
+                {
+                  
+                    result.List = mapper.Map<List<ListProductViewModel>>(products);
+                    result.IsSuccess = true;
+                    result.Message = "Sayfalama işlemi başarılı.";
+                    
+                }
+                
+            }
+
+            result.pageCount = pageCount;
 
             return result;
         }
