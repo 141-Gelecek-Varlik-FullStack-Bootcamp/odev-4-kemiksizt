@@ -18,7 +18,7 @@ namespace Week3.DB.Entities
         public bool IsDeleted { get; set; }
         public DateTime Idate { get; set; }
         public DateTime? Udate { get; set; }
-        public int Iuser { get; set; }
+        public int IUser { get; set; }
         public int? Uuser { get; set; }
 
         public virtual Category Category { get; set; }

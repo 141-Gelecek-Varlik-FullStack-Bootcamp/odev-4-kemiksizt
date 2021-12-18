@@ -55,6 +55,14 @@ namespace Week3.API.Controllers
             return productService.DeleteProduct(id);
         }
         */
+
+
+        [HttpGet]
+        [Route("Sort")]
+        public General<ListProductViewModel> SortProducts([FromQuery] string param)
+        {
+            return productService.SortProduct(param);
+        }
     }
     
 }

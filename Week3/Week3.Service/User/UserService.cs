@@ -132,12 +132,18 @@ namespace Week3.Service.User
 
             using (var context = new GrootContext())
             {
-                if(context.User.Any(x => x.UserName == user.UserName &&
+                var permission = context.User.Any(x => x.UserName == user.UserName &&
                                          x.IsActive &&
                                          !x.IsDeleted &&
-                                         x.Password == user.Password))
+                                         x.Password == user.Password);
+
+                var data = context.User.FirstOrDefault(x => !x.IsDeleted &&
+                                                x.IsActive &&
+                                                x.UserName == user.UserName &&
+                                                x.Password == user.Password);
+                if (permission)
                 {
-                    result.Entity = mapper.Map<UserLoginViewModel>(logUser);
+                    result.Entity = mapper.Map<UserLoginViewModel>(data);
                     result.IsSuccess = true;
                     result.Message = "İşlem Başarılı !";
                 }

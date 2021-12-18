@@ -84,7 +84,7 @@ namespace Week3.DB.Entities.DataContext
                     .HasColumnName("IDate")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.Iuser).HasColumnName("IUser");
+                entity.Property(e => e.IUser).HasColumnName("IUser");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -107,7 +107,7 @@ namespace Week3.DB.Entities.DataContext
 
                 entity.HasOne(d => d.IuserNavigation)
                     .WithMany(p => p.Product)
-                    .HasForeignKey(d => d.Iuser)
+                    .HasForeignKey(d => d.IUser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_User");
             });

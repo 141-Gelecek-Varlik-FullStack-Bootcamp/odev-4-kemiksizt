@@ -25,6 +25,11 @@
       "ProjectGuid": "e467d59a-64e9-4e95-a93e-6ab81f7a70f7",
       "DisplayName": "Week3.Extension",
       "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 5

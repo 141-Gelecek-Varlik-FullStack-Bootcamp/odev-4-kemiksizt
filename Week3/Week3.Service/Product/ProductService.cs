@@ -107,7 +107,7 @@ namespace Week3.Service.Product
 
             using (var context = new GrootContext())
             {
-                var permission = context.User.Any(x => x.Id == InsProduct.Iuser && x.IsActive && !x.IsDeleted);
+                var permission = context.User.Any(x => x.Id == InsProduct.IUser && x.IsActive && !x.IsDeleted);
 
                 if (permission)
                 {
@@ -140,7 +140,7 @@ namespace Week3.Service.Product
             using (var context = new GrootContext())
             {
                 var updatedProduct = context.Product.SingleOrDefault(i => i.Id == id);
-                var permission = context.Product.Any(x => x.Iuser == product.IUser);
+                var permission = context.Product.Any(x => x.IUser == product.IUser);
 
                 if (permission)
                 {
@@ -181,7 +181,7 @@ namespace Week3.Service.Product
             using (var context = new GrootContext())
             {
                 var productActivity = context.Product.SingleOrDefault(i => i.Id == id);
-                var permission = context.Product.Any(x => x.Iuser == product.IUser);
+                var permission = context.Product.Any(x => x.IUser == product.IUser);
 
                 if (permission)
                 {
@@ -218,26 +218,26 @@ namespace Week3.Service.Product
 
             using (var context = new GrootContext())
             {
-                var products = context.Product;
+                var products = context.Product.Where(u => u.IsActive && !u.IsDeleted);
 
                 if (param.Equals("PriceASC"))
                 {
-                    products = (DbSet<DB.Entities.Product>)products.OrderBy(x => x.Price);
+                    products = products.OrderBy(x => x.Price);
                 }
 
                 else if (param.Equals("PriceDESC"))
                 {
-                    products = (DbSet<DB.Entities.Product>)products.OrderByDescending(x => x.Price);
+                    products = products.OrderByDescending(x => x.Price);
                 }
 
                 else if (param.Equals("NameASC"))
                 {
-                    products = (DbSet<DB.Entities.Product>)products.OrderBy(x => x.Price);
+                    products = products.OrderBy(x => x.Price);
                 }
 
                 else if (param.Equals("NameDESC"))
                 {
-                    products = (DbSet<DB.Entities.Product>)products.OrderByDescending(x => x.Price);
+                    products = products.OrderByDescending(x => x.Price);
                 }
 
                 else
